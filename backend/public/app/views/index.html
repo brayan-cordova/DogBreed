@@ -6,12 +6,25 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
+    <!-- CSS -->
     <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/animate.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
 
+    <!-- main Angular Files -->
     <script src="assets/js/angular.js"></script>
     <script src="assets/js/angular-route.js"></script>
+    <script src="assets/js/angular-animate.js"></script>
+
+    <!-- main Config/Routes -->
     <script src="app/app.js"></script>
     <script src="app/routes.js"></script>
+
+    <!-- Angular Controllers -->
+    <script src="app/controllers/userController.js"></script>
+
+    <!-- Angular Services -->
+    <script src="app/services/userServices.js"></script>
 
     <title>Dog Breed</title>
 
@@ -34,6 +47,7 @@
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
             <li class="active"><a href="/">Home</a></li>
+            <li><a href="/register">Register</a></li>
             <li><a href="#logout">Logout</a></li>
           </ul>
         </div>

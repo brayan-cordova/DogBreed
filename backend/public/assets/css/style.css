@@ -1,0 +1,40 @@
+main {
+    padding-top: 30px;
+}
+
+/* Header */
+header .navbar {
+    border-radius:0;
+}
+
+/* NG Animate */
+
+/* show and hide */
+.show-hide-message.ng-hide-remove {
+    -webkit-animation:zoomIn 0.5s both ease;
+    -moz-animation:zoomIn 0.5s both ease;
+    animation:zoomIn 0.5s both ease;
+}
+
+/* Animations */
+
+.spinner {
+    -webkit-animation:zoomIn 8s infinite;
+    -moz-animation:zoomIn 8s infinite;
+    animation:zoomIn 8s infinite;
+}
+
+@keyframes spin{
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg);}
+}
+
+@-webkit-keyframes spin {
+    from { -webkit-transform: rotate(0deg); }
+    to { -webkit-transform: rotate(360deg);}
+}
+
+@-keyframes spin{
+    from { -moz-transform: rotate(0deg); }
+    to { -moz-transform: rotate(360deg);}
+}
