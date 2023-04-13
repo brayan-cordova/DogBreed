@@ -22,15 +22,17 @@
 
     <!-- Angular Controllers -->
     <script src="app/controllers/userController.js"></script>
+    <script src="app/controllers/mainController.js"></script>
 
     <!-- Angular Services -->
     <script src="app/services/userServices.js"></script>
+    <script src="app/services/authServices.js"></script>
 
     <title>Dog Breed</title>
 
   </head>
 
-  <body ng-app="userApp">
+  <body ng-app="userApp" ng-controller="mainCtrl as main">
 
     <!-- Fixed navbar -->
     <nav class="navbar navbar-inverse navbar-fixed-top">
@@ -47,8 +49,8 @@
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
             <li class="active"><a href="/">Home</a></li>
+            <li><a href="/login">Login</a></li>
             <li><a href="/register">Register</a></li>
-            <li><a href="#logout">Logout</a></li>
           </ul>
         </div>
       </div>

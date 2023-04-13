@@ -4,6 +4,7 @@ module.exports = function (router)
 {
     // route for users to register
     //http://localhost:3000/api/users
+    // User Registration Route
     router.post("/users", async(req, res) =>
     {
         try
@@ -41,6 +42,35 @@ module.exports = function (router)
             res.status(400).send(err);
         }
     });
+
+    // User Login Route
+    //http://localhost:3000/api/authenticate
+    router.post('/authenticate', function(req, res){
+        User.findOne({ email: req.body.email }).select('names email password').exec(function(err, user){
+            if (err) throw err;
+
+            if (!user){
+                res.json({ success: false, message: 'Could not authenticate user' });
+            }
+            else if (user){
+                //password validation
+                if (req.body.password){
+                    var validPassword = user.comparePassword(req.body.password);
+                }
+                else{
+                    res.json({ success: false, message: 'No password provided' });
+                }
+                if (!validPassword){
+                    res.json({ success: false, message: 'Could not authenticate password' });
+                }
+                else{
+                    res.json({ success: true, message: 'User authenticated' });
+                }
+            }
+
+        })
+    })
     return router;
+
 }
 
