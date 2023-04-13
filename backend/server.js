@@ -3,10 +3,10 @@ const app         = express();
 const morgan      = require('morgan');
 const port        = process.env.PORT || 3000;
 const mongoose    = require('mongoose');
-var   bodyParser  = require('body-parser');
-var   router      = express.Router();
-var   appRoutes   = require('./app/routes/api')(router);
-var   path        = require('path');
+const   bodyParser  = require('body-parser');
+const   router      = express.Router();
+const   appRoutes   = require('./app/routes/api')(router);
+const   path        = require('path');
 
 mongoose.set('strictQuery', true);
 
